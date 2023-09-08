@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file here -->
+    <script src="script.js" defer></script>
+    <!-- typedjs for the typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-pic">
+        <!-- Slack Display Picture -->
+        <img data-testid="slackDisplayImage" src="slack-pfp.jpg" alt="Davies Peeks">
+        </div>
+
+        <div class="hero-text">
+        <!-- Track -->
+        <h5 data-testid="myTrack">Hi I'm in HNG's <span class="input">Frontend Track</span></h5>
+        <!-- Slack Name -->
+        <h1 data-testid="slackUserName">Davies Peeks</h1>    
+        <div class="time">    
+        <!-- Current Day of the Week -->
+        <div data-testid="currentDayOfTheWeek" class="space"></div>
+
+        <!-- Current UTC Time -->
+        <div data-testid="currentUTCTime"></div>
+        </div>
+        <div class="btn-group">        
+        <!-- GitHub URL -->
+        <a data-testid="githubURL" href="https://github.com/donjne/your-repo">My GitHub Repository</a>
+        </div>
+        </div>
+        </div>
+    <script src="script.js" defer></script> <!-- Include your JavaScript file here -->
+</body>
+</html>
