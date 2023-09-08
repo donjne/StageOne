@@ -13,16 +13,17 @@
             const year = currentTime.getUTCFullYear();
             const month = (currentTime.getUTCMonth() + 1).toString().padStart(2, '0');
             const date = currentTime.getUTCDate().toString().padStart(2, '0');
-            const hours = currentTime.getHours().toString().padStart(2, '0');
-            const minutes = currentTime.getMinutes().toString().padStart(2, '0');
-            const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+            const hours = currentTime.getUTCHours().toString().padStart(2, '0');
+            const minutes = currentTime.getUTCMinutes().toString().padStart(2, '0');
+            const seconds = currentTime.getUTCSeconds().toString().padStart(2, '0');
+            const milliseconds = currentTime.getUTCMilliseconds().toString().padStart(3, '0');
             
             const monthNames = [
                 "January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"
             ];
             
-        const formattedTime = `${date} ${monthNames[currentTime.getUTCMonth()]}, ${year}. &nbsp  Time: ${hours}:${minutes}:${seconds}`;
+        const formattedTime = `${date} ${monthNames[currentTime.getUTCMonth()]}, ${year}. &nbsp  UTC: ${hours}:${minutes}:${seconds}:${milliseconds}`;
         
         // Update the element with the formatted time using innerHTML
         document.querySelector('[data-testid="currentUTCTime"]').innerHTML = formattedTime;
